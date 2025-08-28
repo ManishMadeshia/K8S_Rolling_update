@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Learning - Rolling Update v1</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #326ce5;
+    }
+    p {
+      font-size: 18px;
+      color: #333;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 16px;
+      background-color: #326ce5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #2852b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Kubernetes Learning</h1>
+    <h2>Rolling Update - Version 1</h2>
+    <p>
+      In Kubernetes, Rolling Updates let you upgrade your applications gradually 
+      without downtime by replacing Pods one at a time.
+    </p>
+    <button onclick="redirectToV2()">Click For Next Page</button>
+  </div>
+
+  <script>
+    function redirectToV2() {
+      window.location.href = "rolling-update-v2.html";
+    }
+  </script>
+</body>
+</html>

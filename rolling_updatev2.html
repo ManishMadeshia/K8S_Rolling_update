@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Learning - Rolling Update v2</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #eef5fb;
+      text-align: center;
+      padding: 50px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #326ce5;
+    }
+    p {
+      font-size: 18px;
+      color: #444;
+    }
+    pre {
+      text-align: left;
+      background: #f4f4f4;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+    a {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #326ce5;
+      color: white;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+    a:hover {
+      background-color: #2852b8;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Rolling Update - Version 2</h1>
+    <p>
+      In Version 2, Kubernetes upgrades your application by gradually 
+      replacing old Pods (v1) with new Pods (v2). This ensures zero downtime.
+    </p>
+    <h2>Basic Commands</h2>
+    <pre>
+# Check current deployment
+kubectl get deployments
+
+# Update deployment to new image (v2)
+kubectl set image deployment/my-app my-container=nginx:1.16.1
+
+# Monitor rollout status
+kubectl rollout status deployment/my-app
+
+# Undo (rollback) if needed
+kubectl rollout undo deployment/my-app
+    </pre>
+
+    <a href="index.html">⬅ Back to Version 1</a>
+  </div>
+</body>
+</html>
